@@ -1,0 +1,84 @@
+<project 	xmlns="http://maven.apache.org/POM/4.0.0" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+			
+<modelVersion>4.0.0</modelVersion>
+<groupId>paul.discordbot.m</groupId>
+<artifactId>discordbot</artifactId>
+<version>0.0.1-SNAPSHOT</version>
+
+<repositories>
+ 	<repository>
+  	<id>jitpack.io</id>
+  	<url>https://jitpack.io</url>
+	</repository>
+</repositories>
+
+<dependencies>
+	<dependency>
+		<groupId>org.javacord</groupId>
+		<artifactId>javacord</artifactId>
+		<version>3.1.2</version>
+		<type>pom</type>
+	</dependency>
+        
+	<dependency>
+    	<groupId>org.apache.commons</groupId>
+    	<artifactId>commons-lang3</artifactId>
+    	<version>3.11</version>
+	</dependency>
+	
+	<dependency>
+    	<groupId>org.apache.commons</groupId>
+    	<artifactId>commons-text</artifactId>
+    	<version>1.9</version>
+	</dependency>
+	
+	<dependency>
+    	<groupId>org.json</groupId>
+    	<artifactId>json</artifactId>
+    	<version>20200518</version>
+	</dependency>
+	
+	<dependency>
+    	<groupId>org.postgresql</groupId>
+    	<artifactId>postgresql</artifactId>
+    	<version>42.2.18</version>
+	</dependency>
+	
+	<dependency>
+  		<groupId>de.btobastian.sdcf4j</groupId>
+  		<artifactId>sdcf4j-core</artifactId>
+  		<version>v1.0.10</version>
+	</dependency>
+	
+	<dependency>
+  		<groupId>de.btobastian.sdcf4j</groupId>
+ 		<artifactId>sdcf4j-javacord</artifactId>
+  		<version>v1.0.10</version>
+	</dependency>
+</dependencies> 
+
+<build>
+  <plugins>
+    <plugin>
+      <!-- Build an executable JAR -->
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-jar-plugin</artifactId>
+      <version>3.1.0</version>
+      <configuration>
+        <archive>
+          <manifest>
+            <addClasspath>true</addClasspath>
+            <classpathPrefix>lib/</classpathPrefix>
+            <mainClass>guac.discordbot.AvocadoBot</mainClass>
+          </manifest>
+        </archive>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
+
+<name>avocadobotPaulM</name>
+<description>avocadobot</description>
+</project>

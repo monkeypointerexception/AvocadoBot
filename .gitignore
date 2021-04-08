@@ -1,0 +1,4 @@
+target/
+src/main/java/guac/discordbot/Keys.java
+src/main/java/guac/discordbot/commands/Invite.java
+Procfile
